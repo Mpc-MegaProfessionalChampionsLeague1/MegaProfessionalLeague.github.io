@@ -1,0 +1,74 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MPL — Профиль игрока</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>:root{--bg:#080b11;--line:#1d2633;--text:#edf3fa;--muted:#7f8da1;--accent:#7c5cff;--accent2:#00d4ff;--green:#36d68a;--red:#ff5f6d;--gold:#ffc857}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui;background:radial-gradient(circle at 10% 0%,rgba(124,92,255,.14),transparent 30%),radial-gradient(circle at 90% 10%,rgba(0,212,255,.08),transparent 28%),var(--bg);color:var(--text);min-height:100vh}a{text-decoration:none;color:inherit}.container{width:min(1250px,100%);margin:auto;padding:0 22px 40px}.header{height:76px;display:flex;align-items:center;border-bottom:1px solid var(--line)}.logo{font:800 25px 'Space Grotesk';}.logo span{color:var(--accent)}.logo small{display:block;font:500 9px Inter;color:var(--muted);letter-spacing:1.4px}.nav{display:flex;gap:5px;padding:5px;background:#0d121a;border:1px solid var(--line);border-radius:14px;margin:20px 0}.nav a{padding:10px 16px;border-radius:10px;color:var(--muted);font-size:12px;font-weight:800}.nav a:hover,.nav a.active{color:#fff;background:linear-gradient(135deg,var(--accent),#5d48d9)}.hero{margin:24px 0}.eyebrow{font-size:10px;color:var(--accent2);font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}.hero h1{font:800 34px 'Space Grotesk';letter-spacing:-1.5px}.hero p{color:var(--muted);font-size:13px;margin-top:7px}.card{background:linear-gradient(145deg,#111823,#0b1018);border:1px solid var(--line);border-radius:16px;padding:18px}.section-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{background:#0d131c;border:1px solid var(--line);border-radius:12px;padding:14px}.stat .n{font:800 23px 'Space Grotesk'}.stat .l{font-size:9px;color:var(--muted);text-transform:uppercase;margin-top:4px}.grid{display:grid;gap:14px}.table{width:100%;border-collapse:collapse}.table th{text-align:left;color:#65748a;font-size:9px;text-transform:uppercase;padding:9px;border-bottom:1px solid var(--line)}.table td{padding:11px 9px;border-bottom:1px solid rgba(255,255,255,.045);font-size:11px}.table tr:hover{background:#121925}.player-link{font-weight:800;color:#dfe8f4}.player-link:hover{color:#b9a8ff}.good{color:var(--green)!important}.bad{color:var(--red)!important}.pill{display:inline-block;padding:6px 9px;background:#151e2b;border:1px solid var(--line);border-radius:8px;font-size:9px;color:#aebbd0}.match-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;text-align:center;padding:25px}.team-name{font:800 18px 'Space Grotesk'}.score{font:900 38px 'Space Grotesk'}.versus{font-size:10px;color:var(--muted);font-weight:800}.match-actions{display:flex;gap:8px;justify-content:center;margin:12px 0}.btn{display:inline-block;border:1px solid var(--line);background:#121a26;color:#fff;padding:9px 13px;border-radius:9px;font-size:10px;font-weight:800}.btn.primary{background:linear-gradient(135deg,var(--accent),#5d48d9);border:0}.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.map-card h3{font-size:13px;margin-bottom:5px}.map-score{font:800 22px 'Space Grotesk';margin-bottom:12px}.team-label{font-size:10px;color:#8d9bb0;font-weight:800;margin:12px 0 4px}.player-row{display:grid;grid-template-columns:1fr repeat(5,55px);gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.045);font-size:10px}.player-row b{text-align:right}.footer{text-align:center;color:#526176;font-size:10px;border-top:1px solid var(--line);padding-top:18px;margin-top:24px}@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}.match-head{grid-template-columns:1fr;gap:7px}.map-grid{grid-template-columns:1fr}.player-row{grid-template-columns:1fr repeat(5,40px);font-size:9px}.nav{overflow:auto}.nav a{white-space:nowrap}}</style></head><body><div class="container"><header class="header"><a class="logo" href="index.html">M<span>PL</span><small>FRIENDLY MATCH STATISTICS</small></a></header><nav class="nav"><a href="index.html">📊 Главная</a><a href="players.html">👤 Игроки</a><a href="matches.html">⚡ Матчи</a><a href="statistics.html">📈 Статистика</a></nav><main><div class="hero"><div class="eyebrow">PLAYER PROFILE</div><h1 id="playerName">Игрок</h1><p id="playerSub">Подробная статистика</p></div><div id="player"></div></main><script>const playersData=[
+        { name: 'bomba69', matches: 5, k: 78, d: 49, a: 7, kd: 1.59, adr: 91, diff: 58, rating: 1.41, you: true, avatar: '' },
+        { name: 'Хомяк с авт', matches: 3, k: 63, d: 43, a: 11, kd: 1.47, adr: 100, diff: 116, rating: 1.47, you: false, avatar: '' },
+        { name: 'abdalbek', matches: 5, k: 73, d: 66, a: 12, kd: 1.11, adr: 88, diff: 22, rating: 1.25, you: false, avatar: '' },
+        { name: 'uxaxaxaxa', matches: 5, k: 62, d: 62, a: 9, kd: 1.00, adr: 74, diff: 0, rating: 1.00, you: false, avatar: '' },
+        { name: 'Gonduras228', matches: 5, k: 56, d: 62, a: 18, kd: 0.90, adr: 72, diff: 11, rating: 0.94, you: false, avatar: '' },
+        { name: 'wadsf', matches: 4, k: 51, d: 44, a: 11, kd: 1.16, adr: 64, diff: 50, rating: 1.02, you: false, avatar: '' },
+        { name: 'Adjiare Gudju', matches: 4, k: 59, d: 69, a: 17, kd: 0.86, adr: 73, diff: -35, rating: 0.96, you: false, avatar: '' },
+        { name: 'AFKE', matches: 4, k: 22, d: 44, a: 18, kd: 0.50, adr: 59, diff: -22, rating: 0.71, you: false, avatar: '' },
+        { name: 'balchuqov_valera', matches: 2, k: 15, d: 31, a: 5, kd: 0.48, adr: 49, diff: -79, rating: 0.62, you: false, avatar: '' },
+        { name: 'baksyhanovvand...', matches: 4, k: 25, d: 75, a: 8, kd: 0.33, adr: 41, diff: -119, rating: 0.35, you: false, avatar: '' }
+    ]; const playerMatchHistory={
+        'bomba69': [
+            { match: '#0 BO3', k: 37, d: 15, diff: 22, map: 'Ancient + Anubis' },
+            { match: '#1', k: 10, d: 13, diff: -3, map: 'Mirage' },
+            { match: '#2', k: 24, d: 4, diff: 20, map: 'Mirage' },
+            { match: '#3', k: 12, d: 7, diff: 5, map: 'Mirage' },
+            { match: '#4', k: 16, d: 12, diff: 4, map: 'Mirage' }
+        ],
+        'Хомяк с авт': [
+            { match: '#0 BO3', k: 35, d: 19, diff: 16, map: 'Ancient + Anubis' },
+            { match: '#1', k: 14, d: 9, diff: 5, map: 'Mirage' },
+            { match: '#2', k: 14, d: 15, diff: -1, map: 'Mirage' }
+        ],
+        'abdalbek': [
+            { match: '#0 BO3', k: 20, d: 30, diff: -10, map: 'Ancient + Anubis' },
+            { match: '#1', k: 8, d: 13, diff: -5, map: 'Mirage' },
+            { match: '#2', k: 16, d: 11, diff: 5, map: 'Mirage' },
+            { match: '#3', k: 15, d: 13, diff: 2, map: 'Mirage' },
+            { match: '#4', k: 16, d: 14, diff: 2, map: 'Mirage' }
+        ],
+        'Adjiare Gudju': [
+            { match: '#0 BO3', k: 24, d: 28, diff: -4, map: 'Ancient + Anubis' },
+            { match: '#3', k: 13, d: 15, diff: -2, map: 'Mirage (как fort[чилл])' },
+            { match: '#4', k: 11, d: 13, diff: -2, map: 'Mirage (как fort[чилл])' }
+        ],
+        'uxaxaxaxa': [
+            { match: '#0 BO3', k: 34, d: 16, diff: 18, map: 'Ancient + Anubis' },
+            { match: '#1', k: 0, d: 13, diff: -13, map: 'Mirage' },
+            { match: '#2', k: 10, d: 10, diff: 0, map: 'Mirage' },
+            { match: '#3', k: 13, d: 9, diff: 4, map: 'Mirage' },
+            { match: '#4', k: 11, d: 14, diff: -3, map: 'Mirage' }
+        ],
+        'Gonduras228': [
+            { match: '#0 BO3', k: 16, d: 32, diff: -16, map: 'Ancient + Anubis' },
+            { match: '#1', k: 6, d: 13, diff: -7, map: 'Mirage' },
+            { match: '#2', k: 9, d: 9, diff: 0, map: 'Mirage' },
+            { match: '#3', k: 14, d: 10, diff: 4, map: 'Mirage' },
+            { match: '#4', k: 13, d: 14, diff: -1, map: 'Mirage' }
+        ],
+        'AFKE': [
+            { match: '#0 BO3', k: 14, d: 24, diff: -10, map: 'Ancient + Anubis' },
+            { match: '#1', k: 8, d: 5, diff: 3, map: 'Mirage' },
+            { match: '#2', k: 6, d: 15, diff: -9, map: 'Mirage' }
+        ],
+        'wadsf': [
+            { match: '#1', k: 13, d: 6, diff: 7, map: 'Mirage' },
+            { match: '#2', k: 10, d: 14, diff: -4, map: 'Mirage' },
+            { match: '#3', k: 17, d: 9, diff: 8, map: 'Mirage' },
+            { match: '#4', k: 11, d: 15, diff: -4, map: 'Mirage' }
+        ],
+        'balchuqov_valera': [
+            { match: '#3', k: 6, d: 14, diff: -8, map: 'Mirage' },
+            { match: '#4', k: 9, d: 17, diff: -8, map: 'Mirage' }
+        ],
+        'baksyhanovvand...': [
+            { match: '#0 BO3', k: 14, d: 31, diff: -17, map: 'Ancient + Anubis' },
+            { match: '#1', k: 17, d: 5, diff: 12, map: 'Mirage' },
+            { match: '#2', k: 3, d: 15, diff: -12, map: 'Mirage' },
+            { match: '#3', k: 1, d: 14, diff: -13, map: 'Mirage' },
+            { match: '#4', k: 4, d: 17, diff: -13, map: 'Mirage' }
+        ]
+    };
+const name=new URLSearchParams(location.search).get('player')||'bomba69';const p=playersData.find(x=>x.name===name)||playersData[0];const hist=playerMatchHistory[p.name]||[];document.getElementById('playerName').textContent=p.name;document.getElementById('playerSub').textContent=p.matches+' матчей · профиль игрока';const ach=[];if(p.kd>1.5)ach.push('🥇 Элитный K/D');if(p.diff>100)ach.push('⚡ Доминатор');if(p.adr>90)ach.push('💥 Урон-машина');if(p.matches>=4)ach.push('🏅 Ветеран');document.getElementById('player').innerHTML='<div class="card"><div class="stats"><div class="stat"><div class="n">'+p.kd.toFixed(2)+'</div><div class="l">K/D</div></div><div class="stat"><div class="n">'+p.adr+'</div><div class="l">ADR</div></div><div class="stat"><div class="n '+(p.diff>=0?'good':'bad')+'">'+(p.diff>0?'+':'')+p.diff+'</div><div class="l">Разница</div></div><div class="stat"><div class="n">'+p.rating.toFixed(2)+'</div><div class="l">Rating</div></div></div></div><div class="grid" style="grid-template-columns:1fr 1fr;margin-top:14px"><div class="card"><div class="section-title">🏅 Достижения</div>'+(ach.length?ach.map(x=>'<span class="pill" style="margin:4px">'+x+'</span>').join(''):'<span class="muted">Нет достижений</span>')+'</div><div class="card"><div class="section-title">📊 Общие показатели</div><div class="muted" style="font-size:11px;line-height:1.8">Убийства: <b>'+p.k+'</b><br>Смерти: <b>'+p.d+'</b><br>Ассисты: <b>'+p.a+'</b><br>Матчи: <b>'+p.matches+'</b></div></div></div><div class="card" style="margin-top:14px"><div class="section-title">📋 История матчей</div><table class="table"><thead><tr><th>Матч</th><th>Карта</th><th>K</th><th>D</th><th>±</th><th></th></tr></thead><tbody>'+hist.map(m=>{let id=m.match.replace('#','').split(' ')[0];return '<tr><td><a class="player-link" href="match.html?match=match'+id+'">'+m.match+'</a></td><td class="muted">'+m.map+'</td><td>'+m.k+'</td><td>'+m.d+'</td><td class="'+(m.diff>=0?'good':'bad')+'">'+(m.diff>0?'+':'')+m.diff+'</td><td><a class="btn" href="match-stats.html?match=match'+id+'">Статистика</a></td></tr>'}).join('')+'</tbody></table></div>';</script><footer class="footer">MPL · Friendly Match Statistics · 2026</footer></div></body></html>
